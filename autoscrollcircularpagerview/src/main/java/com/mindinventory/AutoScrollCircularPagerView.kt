@@ -120,10 +120,21 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
                     override fun onScrolled(dx: Int) {
 
                     }
+
                 },
                 RecyclerView.SCROLL_STATE_IDLE
             )
         )
+        rvAutoScroll.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                    scrollHandler.removeCallbacks(runnable)
+                } else if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    scrollHandler.postDelayed(runnable, autoScrollDelay)
+                }
+            }
+        })
     }
 
     fun setAdapter(circularAdapter: CircularAdapter<*>) {
