@@ -163,7 +163,7 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
         }
 
         llSliderDots.layoutParams = llSliderDotsParams
-        val params = GridLayout.LayoutParams(
+        val params = ConstraintLayout.LayoutParams(
             GridLayout.LayoutParams.WRAP_CONTENT,
             GridLayout.LayoutParams.WRAP_CONTENT
         )
