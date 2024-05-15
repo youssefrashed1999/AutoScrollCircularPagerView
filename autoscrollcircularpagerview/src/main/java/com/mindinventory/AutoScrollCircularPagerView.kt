@@ -163,7 +163,6 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
         }
 
         llSliderDots.layoutParams = llSliderDotsParams
-        params.setMargins(8, 0, 8, 0)
         items.indices.forEach {
             slidingImageDots.add(it, AppCompatImageView(context))
             llSliderDots.addView(slidingImageDots[it])
