@@ -163,14 +163,10 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
         }
 
         llSliderDots.layoutParams = llSliderDotsParams
-        val params = ConstraintLayout.LayoutParams(
-            GridLayout.LayoutParams.WRAP_CONTENT,
-            GridLayout.LayoutParams.WRAP_CONTENT
-        )
         params.setMargins(8, 0, 8, 0)
         items.indices.forEach {
             slidingImageDots.add(it, AppCompatImageView(context))
-            llSliderDots.addView(slidingImageDots[it], params)
+            llSliderDots.addView(slidingImageDots[it])
             onPageSelected(0)
         }
     }
