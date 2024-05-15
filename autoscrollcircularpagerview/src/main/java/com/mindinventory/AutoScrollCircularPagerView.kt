@@ -11,6 +11,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.LinearLayout
+import android.widget.GridLayout
 import androidx.annotation.RequiresApi
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
@@ -20,7 +21,6 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import kotlinx.android.synthetic.main.view_auto_scroll_container.view.*
-import java.awt.GridLayout
 
 class AutoScrollCircularPagerView @JvmOverloads constructor(
     context: Context,
