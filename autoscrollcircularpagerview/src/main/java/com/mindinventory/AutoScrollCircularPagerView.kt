@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import kotlinx.android.synthetic.main.view_auto_scroll_container.view.*
+import java.awt.GridLayout
 
 class AutoScrollCircularPagerView @JvmOverloads constructor(
     context: Context,
@@ -162,9 +163,9 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
         }
 
         llSliderDots.layoutParams = llSliderDotsParams
-        val params = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
+        val params = GridLayout.LayoutParams(
+            GridLayout.LayoutParams.WRAP_CONTENT,
+            GridLayout.LayoutParams.WRAP_CONTENT
         )
         params.setMargins(8, 0, 8, 0)
         items.indices.forEach {
