@@ -156,6 +156,9 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
                 centerItemPosition = number * items.size
                 rvAutoScroll.layoutManager?.scrollToPosition(centerItemPosition)
                 setDots(items)
+            } else {
+                slidingImageDots.clear()
+                llSliderDots.removeAllViews()
             }
         }
         startAutoScrollIfRequired()
