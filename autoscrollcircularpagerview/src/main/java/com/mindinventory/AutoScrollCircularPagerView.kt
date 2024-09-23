@@ -211,13 +211,13 @@ class AutoScrollCircularPagerView @JvmOverloads constructor(
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
-    private fun startAutoScrollIfRequired() {
+    fun startAutoScrollIfRequired() {
         if (requiredAutoScroll() && !scrollHandler.hasCallbacks(runnable) && isAutoScrollEnabled)
             scrollHandler.postDelayed(runnable, autoScrollDelay)
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
-    private fun stopAutoScrollIfRequired() {
+    fun stopAutoScrollIfRequired() {
         if (scrollHandler.hasCallbacks(runnable)) {
             scrollHandler.removeCallbacks(runnable)
         }
